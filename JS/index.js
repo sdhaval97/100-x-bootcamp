@@ -118,3 +118,20 @@ function highestAverage(data) {
     }
     return topper;
 }
+
+// Question 9. unique values
+
+function uniqueValues(data) {
+    output = [];
+    for (let key in data) {
+        let value = data[key];
+        for (let i=0; i < value.length; i++) {
+            if (!output.includes(value[i])) {
+                output.push(value[i]);
+            }
+        }
+    }
+    return output;
+}
+
+console.log(uniqueValues({ x: [1,2,3], y: [2,3,4], z: [4,5] }))
