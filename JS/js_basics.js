@@ -200,4 +200,19 @@ function objectToQueryString(data) {
     return queryString.join("&");
 }
 
-console.log(objectToQueryString({ name: "Alice", age: 25 }));
+// Question 16. Count even and odd nos
+function countEvenOdd(data) {
+    let output = {};
+    evenCount = 0;
+    oddCount = 0;
+    for (let i = 0; i < data.length; i++) {
+        if (data[i] % 2 === 0) {
+            evenCount += 1;
+        } else {
+            oddCount += 1;
+        }
+    output["even"] = evenCount;
+    output["odd"] = oddCount;
+    }
+    return output;
+}
