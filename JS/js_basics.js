@@ -149,5 +149,21 @@ function onlyGivenKeys(data, keyArr) {
 
 // Question 12. sort object entries
 function sortObjectEntries(data) {
-    for (let key in data) {}
+    objectArr = [];
+    for (let key in data) {
+        let value = data[key];
+        objectArr.push([key, value]);
+
+    }
+    for (let i = 0; i < objectArr.length; i++) {
+        for (let j = 0; j < objectArr.length-1; j++) {
+            if (objectArr[j][1] > objectArr[j+1][1]) {
+                let tmp = objectArr[j];
+                objectArr[j] = objectArr[j+1];
+                objectArr[j+1] = tmp;
+            }
+        }
+    }
+    return objectArr;
 }
+console.log(sortObjectEntries({ a: 3, b: 1, c: 2 }));
