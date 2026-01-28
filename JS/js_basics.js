@@ -146,3 +146,8 @@ function onlyGivenKeys(data, keyArr) {
     }
     return output;
 }
+
+// Question 12. sort object entries
+function sortObjectEntries(data) {
+    for (let key in data) {}
+}
