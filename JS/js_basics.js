@@ -250,3 +250,18 @@ function arrayToLookup(myArr) {
     }
     return output;
 }
+
+// Question 19: Check if all values are numbers
+
+function allNumbers(data) {
+    let output;
+    valueArray = Object.values(data)
+    for (let i = 0; i < valueArray.length; i++) {
+        if (typeof valueArray[i] !== 'number') {
+            output = false;
+        } else {
+            output = true;
+        }
+    }
+    return output;
+}
