@@ -46,3 +46,17 @@ function swapKeyValue(data) {
 
 console.log(swapKeyValue({ a: "x", b: "y", c: "z" }));
 
+function largestValueKey(data) {
+    let largestNumber = 0;
+    let largestKey = "";
+    for (let key in data) {
+        if (data[key] > largestNumber) {
+            largestNumber = data[key];
+            largestKey = key;
+        }
+    }
+    return largestKey;
+}
+
+
+
