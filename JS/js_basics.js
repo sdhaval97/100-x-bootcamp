@@ -216,3 +216,28 @@ function countEvenOdd(data) {
     }
     return output;
 }
+
+// Question 17. Finding common keys
+
+function commonKeys(data1, data2) {
+    output = [];
+    key1 = [];
+    key2 = [];
+    for (let key in data1) {
+        key1.push(key);
+    }
+    for (let key in data2) {
+        key2.push(key);
+    }
+
+    for (let i=0; i < key1.length; i++) {
+        for (let j=0; j < key2.length; j++) {
+            if (key1[i] === key2[j]) {
+                output.push(key1[i]);
+            } 
+        }
+    }
+    return output;
+
+}
+
