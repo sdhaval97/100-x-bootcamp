@@ -166,4 +166,38 @@ function sortObjectEntries(data) {
     }
     return objectArr;
 }
-console.log(sortObjectEntries({ a: 3, b: 1, c: 2 }));
+
+// Question 13. Count number of keys in an object
+
+function countKeys(data) {
+    keyCount = 0
+    for (let key in data) {
+        keyCount += 1;
+    }
+    return keyCount;
+}
+
+// Question 14. capitalize string values
+
+function capitalizeString(data) {
+    let output = {};
+    for (let key in data) {
+        let value = data[key];
+        newValue = value.charAt(0).toUpperCase() + value.slice(1);
+        output[key] = newValue;
+    }
+    return output;
+}
+
+// Question 15. convert to query string
+
+function objectToQueryString(data) {
+    queryString = [];
+    for (let key in data) {
+        let value = data[key];
+        queryString.push(key + "=" + value);
+    }
+    return queryString.join("&");
+}
+
+console.log(objectToQueryString({ name: "Alice", age: 25 }));
