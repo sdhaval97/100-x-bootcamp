@@ -1,0 +1,16 @@
+JAVASCRIPT
+- web dev involves HTML, CSS and javascript code for front end
+- browsers only understand html, css and javascript
+- a combination of html, css, js and a bunch of images
+- inside the browser, you will not be able to run c++, rust, go etc
+
+Facts:
+- React, NextJS are frameworks. they compile down to html css and js
+- browser interprets html, css js and webassembly
+
+PROPERTIES OF JS:
+- interpreted language, which means it is executed line by line at run time
+- dynamically types, which means that you dont have to declare the types of a variable
+- Single threaded (red flag), which means that it can only run on one of your cpus. so, even if you have to go through a large set of inputs, only 1 cpu will be used
+- garbage collection, done through garbage collector, which is pretty slow (memory management)
+- Bun JS is creating faster runtime for javascript
