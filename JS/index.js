@@ -82,3 +82,18 @@ function groupPeople(data) {
     }
     return output
 }
+
+// Question 7: filter object by values > 50
+
+function filterObjects(data) {
+    let output = {};
+    for (let key in data) {
+        let value = data[key]
+        if (value > 50) {
+            output[key] = value;
+        }
+    }
+    return output;
+}
+
+console.log(filterObjects({ a: 20, b: 60, c: 40, d: 90 }));
