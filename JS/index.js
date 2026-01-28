@@ -65,3 +65,20 @@ function flattenArray(data) {
     }
     return output;
 }
+
+// Question 6: Group people by city
+
+function groupPeople(data) {
+    let output = {};
+    for (let person of data) {
+        let city = person.city;
+        let name = person.name;
+
+        if (!output[city]) {
+            output[city] = [name];
+        } else {
+            output[city].push(name);
+        }
+    }
+    return output
+}
