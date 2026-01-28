@@ -134,4 +134,15 @@ function uniqueValues(data) {
     return output;
 }
 
-console.log(uniqueValues({ x: [1,2,3], y: [2,3,4], z: [4,5] }))
+// Question 10. pick only given keys
+
+function onlyGivenKeys(data, keyArr) {
+    let output = {};
+    for (let key in data) {
+        let value = data[key];
+        for (let i = 0; i < keyArr.length; i++) {
+            output[keyArr[i]] = data[keyArr[i]];
+        }
+    }
+    return output;
+}
