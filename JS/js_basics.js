@@ -241,3 +241,12 @@ function commonKeys(data1, data2) {
 
 }
 
+// Question 18. arrays to lookup
+
+function arrayToLookup(myArr) {
+    let output = {};
+    for (let item of myArr) {
+        output[myArr.id] = item;
+    }
+    return output;
+}
