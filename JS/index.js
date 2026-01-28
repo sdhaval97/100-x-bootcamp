@@ -32,4 +32,17 @@ function wordOccurences(myArr) {
     return output;
 }
 
+// Question 3: Swap keys and values
+
+function swapKeyValue(data) {
+    output = {};
+    for (let key in data) {
+        let value = data[key];
+
+        output[value] = key;
+    }
+    return output;
+}
+
+console.log(swapKeyValue({ a: "x", b: "y", c: "z" }));
 
