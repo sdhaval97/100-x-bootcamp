@@ -96,4 +96,25 @@ function filterObjects(data) {
     return output;
 }
 
-console.log(filterObjects({ a: 20, b: 60, c: 40, d: 90 }));
+// Question 8: finding student with highest average
+
+function highestAverage(data) {
+    let topper = "";
+    largestAverage = 0;
+    for (let key in data) {
+        let value = data[key];
+        let sum = 0;
+        let average;
+        for (let i=0; i < value.length; i++) {
+            sum = sum + value[i];
+        }
+        average = sum / value.length;
+        
+        if (average > largestAverage) {
+            largestAverage = average;
+            topper = key;
+        }
+        
+    }
+    return topper;
+}
