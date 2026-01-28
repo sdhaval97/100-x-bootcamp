@@ -17,7 +17,6 @@ function sumValues(data) {
     return output;
 }
 
-
 // Question 2: count word occurences
 
 function wordOccurences(myArr) {
@@ -44,7 +43,7 @@ function swapKeyValue(data) {
     return output;
 }
 
-console.log(swapKeyValue({ a: "x", b: "y", c: "z" }));
+// Question 4: largest value key
 
 function largestValueKey(data) {
     let largestNumber = 0;
@@ -58,5 +57,11 @@ function largestValueKey(data) {
     return largestKey;
 }
 
-
-
+// Question 5: flatten object of arrays
+function flattenArray(data) {
+    output = [];
+    for (let key in data) {
+        output.push(...data[key]);
+    }
+    return output;
+}
