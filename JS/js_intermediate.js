@@ -103,3 +103,21 @@ function objectGroups(data, size) {
     return outputArr;
 }
 
+// Question 8. longest string among object values
+
+function getLongestString(data) {
+    let longestString = "";
+    let values = Object.values(data);
+    let stringLength = 0;
+
+    for (let i = 0; i < values.length; i++) {
+        if (values[i].length > stringLength) {
+            stringLength = values[i].length;
+            longestString = values[i];
+        }
+    }
+
+    return longestString;
+}
+
+
