@@ -120,4 +120,21 @@ function getLongestString(data) {
     return longestString;
 }
 
+// Question 9. 
+
+function language(data) {
+    let output = {};
+    for (let langKey in data) {
+        let translations = data[langKey];
+        for (let wordkey in translations) {
+            let translation = translations[wordkey];
+            if (!output[wordkey]) {
+                output[wordkey] = {};
+            }
+            output[wordkey][langKey] = translation;
+        }
+    }
+    return output;
+}
+
 
