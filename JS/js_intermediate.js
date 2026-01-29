@@ -29,3 +29,16 @@ function transformAPI(myArr) {
     }
     return response;
 }
+
+// Question 3. Remove falsy values
+
+function removeFalsy(data) {
+    cleaned = {};
+    for (let key in data) {
+        let value = data[key];
+        if (value) {
+            cleaned[key] = value;
+        }
+    }
+    return cleaned;
+}
