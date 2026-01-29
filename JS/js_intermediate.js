@@ -42,3 +42,14 @@ function removeFalsy(data) {
     }
     return cleaned;
 }
+
+// Question 4. Check for permissions
+
+function checkPermissions(roles, checkRole, action) {
+    let permissions = roles[checkRole];
+    if (permissions && permissions.includes(action)) {
+        return true;
+    } else {
+        return false;
+    }
+}
