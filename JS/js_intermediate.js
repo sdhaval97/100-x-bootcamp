@@ -15,3 +15,17 @@ function sumTransactions(myArr) {
     }
     return totals;
 }
+
+// Question 2: transform API response
+
+function transformAPI(myArr) {
+    response = {};
+    for (let user of myArr) {
+        let id = user.id;
+        let name = user.name;
+        if (!response[id]) {
+            response[id] = name;
+        }
+    }
+    return response;
+}
