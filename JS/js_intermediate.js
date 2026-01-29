@@ -70,3 +70,25 @@ function checkRevenue(sales) {
     }
     return revenue;
 }
+
+// Question 6. remove duplicates by id
+
+function removeDuplicates(users) {
+    output = [];
+    seenIDs = [];
+    for (let user of users) {
+        let id = user.id;
+        let name = user.name;
+        if (!seenIDs.includes(id)) {
+            seenIDs.push(id);
+            output.push(user);
+        }
+    }
+    return output;
+}
+
+console.log(removeDuplicates([
+  { id: 1, name: "A" },
+  { id: 2, name: "B" },
+  { id: 1, name: "A" }
+]));
