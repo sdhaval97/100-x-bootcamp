@@ -87,8 +87,19 @@ function removeDuplicates(users) {
     return output;
 }
 
-console.log(removeDuplicates([
-  { id: 1, name: "A" },
-  { id: 2, name: "B" },
-  { id: 1, name: "A" }
-]));
+// Question 7. chunk objects into groups of size
+
+function objectGroups(data, size) {
+    let outputArr = [];
+    let dataArr = [];
+    for (let key in data) {
+        let value = data[key];
+        dataArr.push([key, value]);
+    }
+    for (let i = 0; i < dataArr.length; i += size) {
+        let chunk = dataArr.slice(i, i + size);
+        outputArr.push(chunk);
+    }
+    return outputArr;
+}
+
