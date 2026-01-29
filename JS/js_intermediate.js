@@ -53,3 +53,20 @@ function checkPermissions(roles, checkRole, action) {
         return false;
     }
 }
+
+// Question 5. array of orders into revenue per category
+
+function checkRevenue(sales) {
+    let revenue = {};
+    for (let sale of sales) {
+        let id = sale.id;
+        let category = sale.category;
+        let price = sale.price;
+        if (revenue[category]) {
+            revenue[category] += price;
+        } else {
+            revenue[category] = price;
+        }
+    }
+    return revenue;
+}
